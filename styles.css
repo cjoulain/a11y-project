@@ -1,99 +1,112 @@
 header {
-    top: 0;
-    position: fixed;
-    width: 100%;
-    justify-content: center;
-    padding: 5px;
-    background-color: #0073EA;
-    color: #fff;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  justify-content: center;
+  padding: 5px;
+  background-color: #003779;
+  color: #fff;
+}
+
+nav a {
+  color: #fff;
+}
+
+.crumbs {
+  padding-left: 0;
+}
+
+caption {
+  padding: 0.5em;
 }
 
 body {
-    text-align: center;
-    font-family: "Helvetica";
+  text-align: center;
+  font-family: "Helvetica";
 }
 
 main {
-    margin: 10px;
-    padding: 10px;
+  margin: 5em;
+  padding: 5em;
 }
 
-h1 {
-    padding: 5px;
+h2 {
+  padding: 5px;
 }
 
 .skip {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+  color: #fff;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .skip:focus {
-    position: static;
-    width: auto;
-    height: auto;
+  position: static;
+  width: auto;
+  height: auto;
 }
 
 .devils-primary-color {
-    margin-left: 10px;
-    fill: rgb(206,17,38)
+  margin-left: 10px;
+  fill: rgb(206,17,38)
 }
 
 .devils-secondary-color {
-    margin-left: 10px;
-    fill: rgb(0,0,0)
+  margin-left: 10px;
+  fill: rgb(0,0,0)
 }
 
 .sharks-primary-color {
-    margin-left: 10px;
-    fill:rgb(0,109,117);
+  margin-left: 10px;
+  fill:rgb(0,109,117);
 }
 
 .sharks-secondary-color {
-    margin-left: 10px;
-    fill:rgb(234,114,0);
+  margin-left: 10px;
+  fill:rgb(234,114,0);
 }
 
 p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 table.styled {
-    border-collapse: collapse;
-    text-align: center;
-    font-family: Avenir, Roboto, Heveltica, sans-serif;
-    margin: 0px auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: Avenir, Roboto, Heveltica, sans-serif;
+  margin: 0px auto;
 }
 
 .styled th {
-    text-align: inherit;
-    text-transform: uppercase;
+  text-align: inherit;
+  text-transform: uppercase;
 }
 
 .styled th, .styled td {
-    border: 1px solid #999;
-    padding: 0.5em 0.75rem 0.2em;
-    vertical-align: top;
+  border: 1px solid #999;
+  padding: 0.5em 0.75rem 0.2em;
+  vertical-align: top;
 }
 
 ul {
-    list-style-position: inside;
+  list-style-position: inside;
 }
 
 li {
-    margin: 10px
+  margin: 10px
 }
 
 footer {
-    bottom: 0;
-    margin-bottom: 10px;
-    position: fixed;
-    width: 100%;
-    justify-content: center;
-    padding: 5px;
-    background-color: #0073EA;
-    color: #fff;
+  bottom: 0;
+  margin-bottom: 10px;
+  position: fixed;
+  width: 100%;
+  justify-content: center;
+  padding: 5px;
+  background-color: #003779;
+  color: #fff;
 }

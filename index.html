@@ -2,68 +2,87 @@
 <html dir="ltr" lang="en-us">
 
 <head>
-    <title>CJ's a11y project sandbox</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
+  <title>CJ's a11y project sandbox</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>a hockey a11y experiment
-        <a href="#main-content" class="skip">Skip to main content</a>
-    </header>
-    <main id="main-content">
-        <h1>How do NHL teams approach accessibility?</h1>
-            <image src="https://images.vectorhq.com/images/thumbs/e63/nhl-logo-psd-441455.png" alt="The National Hockey League logo is reminiscent of a shield. It features the words 'NHL' tilted downwards from upper left to lower right on a crest-shaped pattern that has five points on top and one at the bottom. The crest's interior is black with its outline and words shaded orange. This second iteration of the logo was designed in 1946." class="main-logo">
-            <p class="description">An analysis of franchise primary colors and logos.</p>
-            <table class="styled">
-                <tr>
-                    <th>Team</th>
-                    <th>Primary Color</th>
-                    <th>Secondary Color</th>
-                    <th>Logo</th>
-                    <th>Recommendation</th>
-                </tr>
-                <tr>
-                    <td>New Jersey Devils</td>
-                    <td>
-                        <svg class="devils-primary-color" role="img" width="50" height="20" aria-label="The primary color for the New Jersey Devils is firehouse red.">
-                            <rect width="200" height="100" />
-                        </svg>
-                    </td>
-                    <td>
-                        <svg class="devils-secondary-color" role="img" width="50" height="20" aria-label="The secondary color for the New Jersey Devils is onyx black.">
-                            <rect width="200" height="100" />
-                        </svg>
-                    </td>
-                    <td>TBD</td>
-                    <td>TBD</td>
-                </tr>
-                <tr>
-                    <td>San Jose Sharks</td>
-                    <td>
-                        <svg class="sharks-primary-color" role="img" width="50" height="20" aria-label="The primary color for the San Jose Sharks is teal green.">
-                            <rect width="200" height="100" />
-                        </svg>
-                    </td>
-                    <td>
-                        <svg class="sharks-secondary-color" role="img" width="50" height="20" aria-label="The secondary color for the San Jose Sharks is a bright orange.">
-                            <rect width="200" height="100" />
-                        </svg>
-                    </td>
-                    <td>TBD</td>
-                    <td>TBD</td>
-                </tr>
-            </table>
-            <h2>TO DO:</h2>
-                <p class="to-do">
-                    <ul>
-                        <li>WIP: Use semantic elements to replace paragraphs</li>
-                        <li>Add table with different team names, logos, and color hex or RGB codes</li>
-                        <li>Stretch: Use WebAIM API to see if colors pass WCAG</li>
-                    </ul>
-                </p>
-    </main>
-    <footer class="footer">© 2022 cj</footer>
+  <header>
+    <h1>a hockey a11y experiment</h1>
+    <a href="#main-content" class="skip">Skip to main content</a>
+    <nav class="crumbs">
+      <ul>
+        <li class="home"><a href="#">Home</a></li>
+        <li class="about"><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <h2>How do NHL teams approach accessibility?</h1>
+      <image src="https://images.vectorhq.com/images/thumbs/e63/nhl-logo-psd-441455.png" alt="The National Hockey League logo is reminiscent of a shield. It features the words 'NHL' tilted downwards from upper left to lower right on a crest-shaped pattern that has five points on top and one at the bottom. The crest's interior is black with its outline and words shaded orange. This second iteration of the logo was designed in 1946." class="main-logo">
+      <p class="description">An analysis of franchise primary colors and logos.</p>
+        <table class="styled">
+          <caption id="color-contrast">NHL Color Contrast Check</caption>
+            <thead>
+              <tr>
+                <th scope="col">Team</th>
+                <th scope="col">Primary Color</th>
+                <th scope="col">Secondary Color</th>
+                <th scope="col">Primary Ratio</th>
+                <th scope="col">Secondary Ratio</th>
+                <th scope="col">Logo</th>
+                <th scope="col">Recommendation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">New Jersey Devils</td>
+                <td scope="row">
+                  <svg class="devils-primary-color" role="img" width="50" height="20" aria-label="The primary color for the New Jersey Devils is firehouse red.">
+                    <rect width="200" height="100" />
+                  </svg>
+                </td>
+                <td scope="row">
+                  <svg class="devils-secondary-color" role="img" width="50" height="20" aria-label="The secondary color for the New Jersey Devils is onyx black.">
+                    <rect width="200" height="100" />
+                  </svg>
+                </td scope="row">
+                <td scope="row">5.63</td>
+                <td scope="row">21</td>
+                <td scope="row">TBD</td>
+                <td scope="row">TBD</td>
+              </tr>
+              <tr>
+                <td scope="row">San Jose Sharks</td>
+                <td scope="row">
+                  <svg class="sharks-primary-color" role="img" width="50" height="20" aria-label="The primary color for the San Jose Sharks is teal green.">
+                    <rect width="200" height="100" />
+                  </svg>
+                </td>
+                <td scope="row">
+                  <svg class="sharks-secondary-color" role="img" width="50" height="20" aria-label="The secondary color for the San Jose Sharks is a bright orange.">
+                    <rect width="200" height="100" />
+                  </svg>
+                </td>
+                <td scope="row">TBD</td>
+                <td scope="row">TBD</td>
+                <td scope="row">TBD</td>
+                <td scope="row">TBD</td>
+              </tr>
+            </tbody>
+        </table>
+        <h3>TO DO:</h3>
+          <p class="to-do">
+            <ul>
+              <li>Decouple the nav CSS (child) from the header CSS (parent)</li>
+              <li>Use semantic elements to replace paragraphs</li>
+              <li>Add table with different team names, logos, and color hex or RGB codes</li>
+              <li>Stretch: Use WebAIM API to see if colors pass WCAG</li>
+            </ul>
+          </p>
+  </main>
+  <footer>© 2022 cj</footer>
 </body>
 
 </html>
